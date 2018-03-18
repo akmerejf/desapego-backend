@@ -1,0 +1,7 @@
+ Hi <%= @user.unconfimed_email %>,
+
+Here is the instrunctions to change your email. 
+To proceed your registration click the URL below.
+
+<%=  link_to "confirm", confirm_users_url(token: @user.confirmation_token, host: "http://localhost:3000")%>
+
